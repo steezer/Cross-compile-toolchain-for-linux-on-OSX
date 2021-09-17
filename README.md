@@ -3,7 +3,7 @@
 
 This builds an x86_64 GCC toolchain for Linux on OSX.
 
-This is based on the extremely helpful script, located here:
+This is based on the extremely helpful script, located here:  
 https://github.com/johnlondon/Cross-compile-toolchain-for-linux-on-OSX.git
 
 ## Installation notes
