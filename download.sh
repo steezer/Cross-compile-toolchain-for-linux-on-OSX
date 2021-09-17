@@ -22,27 +22,15 @@ startDownload(){
 }
 
 # Download packages
-if [[ USE_NEWLIB=1 ]]; then
-	startDownload https://ftp.gnu.org/gnu/binutils/$BINUTILS_VERSION.tar.gz
-	startDownload https://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz
-	startDownload https://www.kernel.org/pub/linux/kernel/v4.x/$LINUX_KERNEL_VERSION.tar.xz
-	startDownload https://ftp.gnu.org/gnu/glibc/$GLIBC_VERSION.tar.xz
-	startDownload https://ftp.gnu.org/gnu/mpfr/$MPFR_VERSION.tar.xz
-	startDownload https://ftp.gnu.org/gnu/gmp/$GMP_VERSION.tar.xz
-	startDownload https://ftp.gnu.org/gnu/mpc/$MPC_VERSION.tar.gz
-	startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$ISL_VERSION.tar.bz2
-	startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$CLOOG_VERSION.tar.gz
-else
-	startDownload https://ftp.gnu.org/gnu/binutils/$BINUTILS_VERSION.tar.gz
-	startDownload https://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz
-	startDownload https://www.kernel.org/pub/linux/kernel/v4.x/$LINUX_KERNEL_VERSION.tar.gz
-	startDownload https://ftp.gnu.org/gnu/glibc/$GLIBC_VERSION.tar.gz
-	startDownload https://ftp.gnu.org/gnu/mpfr/$MPFR_VERSION.tar.gz
-	startDownload https://ftp.gnu.org/gnu/gmp/$GMP_VERSION.tar.gz
-	startDownload https://ftp.gnu.org/gnu/mpc/$MPC_VERSION.tar.gz
-	startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$ISL_VERSION.tar.gz
-	startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$CLOOG_VERSION.tar.gz
-fi
+startDownload https://ftp.gnu.org/gnu/binutils/$BINUTILS_VERSION.tar.gz
+startDownload https://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz
+startDownload https://www.kernel.org/pub/linux/kernel/v4.x/$LINUX_KERNEL_VERSION.tar.gz
+startDownload https://ftp.gnu.org/gnu/glibc/$GLIBC_VERSION.tar.gz
+startDownload https://ftp.gnu.org/gnu/mpfr/$MPFR_VERSION.tar.gz
+startDownload https://ftp.gnu.org/gnu/gmp/$GMP_VERSION.tar.gz
+startDownload https://ftp.gnu.org/gnu/mpc/$MPC_VERSION.tar.gz
+startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$ISL_VERSION.tar.gz
+startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$CLOOG_VERSION.tar.gz
 
 cd ..
 
