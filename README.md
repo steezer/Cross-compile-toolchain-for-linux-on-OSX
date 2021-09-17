@@ -24,3 +24,7 @@ git clone https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX.gi
 ./download.sh
 ./build.sh
 ~~~~
+
+## Download binary directly
+If you want to build by yourself, you can download binary directly, located here:     
+https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX/releases/download/v1.0.0/x86_64-mac-linux-gcc-8.3.0.tar.gz
