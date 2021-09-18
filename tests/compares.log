@@ -1,0 +1,27 @@
+COLLECT_GCC=/Develop/vendor/toolchain/arm-mac-linux-gnueabihf/bin/arm-mac-linux-gnueabihf-gcc
+Target: arm-mac-linux-gnueabihf
+Configured with: 
+/Volumes/dev/philon/build/arm-mac-linux-gnueabihf/src/gcc/configure 
+--build=x86_64-build_apple-darwin19.5.0 
+--host=x86_64-build_apple-darwin19.5.0 
+--target=arm-mac-linux-gnueabihf 
+--prefix=/Volumes/dev/philon/x-tools/arm-mac-linux-gnueabihf 
+--with-sysroot=/Volumes/dev/philon/x-tools/arm-mac-linux-gnueabihf/arm-mac-linux-gnueabihf/sysroot 
+--enable-languages=c,c++ --with-cpu=cortex-a15 --with-fpu=neon-vfpv4 --with-float=hard 
+--with-pkgversion='crosstool-NG 1.24.0' --enable-__cxa_atexit --disable-libmudflap 
+--disable-libgomp --disable-libssp --disable-libquadmath --disable-libquadmath-support 
+--disable-libsanitizer --disable-libmpx 
+--with-gmp=/Volumes/dev/philon/build/arm-mac-linux-gnueabihf/buildtools 
+--with-mpfr=/Volumes/dev/philon/build/arm-mac-linux-gnueabihf/buildtools 
+--with-mpc=/Volumes/dev/philon/build/arm-mac-linux-gnueabihf/buildtools 
+--with-isl=/Volumes/dev/philon/build/arm-mac-linux-gnueabihf/buildtools 
+--enable-lto --enable-threads=posix --enable-target-optspace 
+--enable-plugin --enable-gold --disable-nls --disable-multilib 
+--with-local-prefix=/Volumes/dev/philon/x-tools/arm-mac-linux-gnueabihf/arm-mac-linux-gnueabihf/sysroot 
+--enable-long-long
+
+
+Thread model: posix
+gcc version 8.3.0 (crosstool-NG 1.24.0) 
+COLLECT_GCC_OPTIONS='-v' '-E' '-mcpu=cortex-a15' '-mfloat-abi=hard' '-mfpu=neon-vfpv4' '-mtls-dialect=gnu' '-marm' '-march=armv7ve+simd'
+ /Develop/vendor/toolchain/arm-mac-linux-gnueabihf/bin/../libexec/gcc/arm-mac-linux-gnueabihf/8.3.0/cc1plus -E -quiet -v -iprefix /Develop/vendor/toolchain/arm-mac-linux-gnueabihf/bin/../lib/gcc/arm-mac-linux-gnueabihf/8.3.0/ -isysroot /Develop/vendor/toolchain/arm-mac-linux-gnueabihf/bin/../arm-mac-linux-gnueabihf/sysroot -D_GNU_SOURCE /dev/null -mcpu=cortex-a15 -mfloat-abi=hard -mfpu=neon-vfpv4 -mtls-dialect=gnu -marm -march=armv7ve+simd

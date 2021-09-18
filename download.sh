@@ -12,15 +12,15 @@ trap 'echo FAILED COMMAND: $previous_command' EXIT
 
 source ./vars.sh
 
-mkdir download
+if [[ ! -d download ]]; then
+	mkdir download
+fi
 cd download
-
 startDownload(){
 	if [[ ! -f "$(basename $1)" ]]; then
 		wget -nc $1
 	fi
 }
-
 # Download packages
 startDownload https://ftp.gnu.org/gnu/binutils/$BINUTILS_VERSION.tar.gz
 startDownload https://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz
@@ -31,10 +31,12 @@ startDownload https://ftp.gnu.org/gnu/gmp/$GMP_VERSION.tar.gz
 startDownload https://ftp.gnu.org/gnu/mpc/$MPC_VERSION.tar.gz
 startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$ISL_VERSION.tar.gz
 startDownload ftp://gcc.gnu.org/pub/gcc/infrastructure/$CLOOG_VERSION.tar.gz
-
 cd ..
 
-mkdir src
+
+if [[ ! -d src ]]; then
+	mkdir src
+fi
 cd src
 # Extract everything
 for f in ../download/*.tar*; do 

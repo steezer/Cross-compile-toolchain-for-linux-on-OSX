@@ -20,6 +20,7 @@ https://github.com/johnlondon/Cross-compile-toolchain-for-linux-on-OSX.git
 ~~~~
 brew install gettext gnu-sed bison
 ulimit -n 4096
+export PATH=/usr/local/Cellar/gnu-sed/4.8/bin:$PATH
 git clone https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX.git
 ./download.sh
 ./build.sh
