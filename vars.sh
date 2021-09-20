@@ -5,9 +5,7 @@ USE_NEWLIB=0
 LINUX_ARCH=x86_64
 CROSS_BASEDIR=${INSTALL_PATH}/${TARGET}
 CROSS_SYSROOT=${CROSS_BASEDIR}/sysroot
-CROSS_USRROOT=${CROSS_BASEDIR}/sysroot/usr
 
-# --with-build-sysroot=$CROSS_BASEDIR
 CROSS_OPTIONS="--with-local-prefix=$CROSS_SYSROOT/usr/local "
 CROSS_OPTIONS="$CROSS_OPTIONS --with-native-system-header-dir=/usr/local/include "
 CROSS_OPTIONS="$CROSS_OPTIONS --with-native-system-header-dir=/usr/include "
@@ -30,7 +28,7 @@ GMP_VERSION=gmp-6.2.1
 MPC_VERSION=mpc-1.2.1
 ISL_VERSION=isl-0.18
 CLOOG_VERSION=cloog-0.18.1
-export PATH=/usr/local/Cellar/gnu-sed/4.8/bin:/usr/local/opt/bison/bin:$INSTALL_PATH/bin:$PATH
+export PATH=/usr/local/Cellar/gnu-sed/4.8/bin:/usr/local/Cellar/gnu-sed/4.8/bin:/usr/local/opt/bison/bin:$INSTALL_PATH/bin:$PATH
 export CFLAGS="-std=gnu11 -O2"
 export CXXFLAGS="-std=gnu++11 -O2"
 export LDFLAGS="-L$CROSS_SYSROOT/usr/lib"

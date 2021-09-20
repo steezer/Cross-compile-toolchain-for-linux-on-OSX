@@ -67,6 +67,7 @@ buildStep3(){
 	echo "Step 3. C/C++ Compilers">>step.log
 	echo "  start: $(date "+%Y-%m-%d %H:%M:%S")">>step.log
 	echo -e "\nStep 3 - C/C++ compilers...\n" && sleep 2
+	[ -d build-gcc ] || rm -rf build-gcc
 	mkdir -p build-gcc
 	cd build-gcc
 	../../src/$GCC_VERSION/configure --prefix=$INSTALL_PATH  --target=$TARGET --enable-languages=c,c++ $GCC_OPTIONS
@@ -81,15 +82,17 @@ buildStep4(){
 	echo "Step 4. Standard C Library Headers and Startup Files">>step.log
 	echo "  start: $(date "+%Y-%m-%d %H:%M:%S")">>step.log
 	echo -e "\nStep 4 - standard lib headers...\n" && sleep 2
+	[ -d build-glibc ] || rm -rf build-glibc
 	mkdir -p build-glibc
 	cd build-glibc
-	../../src/$GLIBC_VERSION/configure --prefix=$CROSS_USRROOT --build=$MACHTYPE --host=$TARGET --target=$TARGET --with-headers=$CROSS_USRROOT/include $GLIBC_OPTIONS libc_cv_forced_unwind=yes
-	make install-bootstrap-headers=yes install-headers
+	
+	../../src/$GLIBC_VERSION/configure --prefix=/usr --build=$MACHTYPE --host=$TARGET --target=$TARGET --with-headers=$CROSS_SYSROOT/usr/include $GLIBC_OPTIONS libc_cv_forced_unwind=yes
+	make install-bootstrap-headers=yes install-headers DESTDIR=$CROSS_SYSROOT
 	make $PARALLEL_MAKE csu/subdir_lib
-	[ -d "$CROSS_USRROOT/lib" ] || mkdir -p "$CROSS_USRROOT/lib"
-	install csu/crt1.o csu/crti.o csu/crtn.o $CROSS_USRROOT/lib
-	$TARGET-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o $CROSS_USRROOT/lib/libc.so
-	touch $CROSS_USRROOT/include/gnu/stubs.h
+	[ -d "${CROSS_SYSROOT}/usr/lib" ] || mkdir -p "${CROSS_SYSROOT}/usr/lib"
+	install csu/crt1.o csu/crti.o csu/crtn.o ${CROSS_SYSROOT}/usr/lib
+	$TARGET-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o ${CROSS_SYSROOT}/usr/lib/libc.so
+	touch ${CROSS_SYSROOT}/usr/include/gnu/stubs.h
 	cd ..
 	echo "    end: $(date "+%Y-%m-%d %H:%M:%S")">>step.log
 }
@@ -117,7 +120,7 @@ buildStep6(){
 	echo -e "\nStep 6 - standard C library and the rest of glibc...\n" && sleep 2
 	cd build-glibc
 	make $PARALLEL_MAKE
-	make install
+	make install DESTDIR=$CROSS_SYSROOT
 	cd ..
 	echo "    end: $(date "+%Y-%m-%d %H:%M:%S")">>step.log
 }

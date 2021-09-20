@@ -20,7 +20,6 @@ https://github.com/johnlondon/Cross-compile-toolchain-for-linux-on-OSX.git
 ~~~~
 brew install gettext gnu-sed bison
 ulimit -n 4096
-export PATH=/usr/local/Cellar/gnu-sed/4.8/bin:$PATH
 git clone https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX.git
 ./download.sh
 ./build.sh
@@ -28,4 +27,10 @@ git clone https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX.gi
 
 ## Download binary directly
 If you want to build by yourself, you can download binary directly, located here:     
-https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX/releases/download/v1.0.0/x86_64-mac-linux-gcc-8.3.0.tar.gz
+https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX/releases/download/v2.0.0/x86_64-mac-linux-gnu.tar.gz
+~~~~
+wget https://github.com/steezer/Cross-compile-toolchain-for-linux-on-OSX/releases/download/v2.0.0/x86_64-mac-linux-gnu.tar.gz
+tar -xzf x86_64-mac-linux-gnu.tar.gz
+mkdir -p /Develop/vendor/toolchain
+mv x86_64-mac-linux-gnu /Develop/vendor/toolchain/
+~~~~
