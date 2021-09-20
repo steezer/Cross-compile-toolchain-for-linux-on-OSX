@@ -1,0 +1,65 @@
+Using built-in specs.
+COLLECT_GCC=
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/bin/x86_64-linux-g++
+COLLECT_LTO_WRAPPER=
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/8.3.0/lto-wrapper
+Target: x86_64-linux
+
+Configured with: 
+	../../src/gcc-8.3.0/configure 
+	     --pass-throughpass-throughprefix=/Develop/vendor/toolchain/x86_64-mac-linux-gnu 
+	     --target=x86_64-linux --enable-languages=c,c++ 
+	     --with-sysroot=/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot 
+	     --with-local-prefix=/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/usr/local 
+	     --with-native-system-header-dir=/usr/local/include 
+	     --with-native-system-header-dir=/usr/include 
+	     --disable-multilib --disable-nls --enable-lto --enable-threads=posix 
+	     --enable-target-optspace --enable-plugin --enable-gold
+
+Thread model: posix
+gcc version 8.3.0 (GCC) 
+
+COMPILER_PATH=
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/8.3.0/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/8.3.0/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/8.3.0/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/bin/
+
+LIBRARY_PATH=
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/8.3.0/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/lib64/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/lib/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/lib/:
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/usr/lib/
+
+COLLECT_GCC_OPTIONS='-v' '-o' 'build/app' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/8.3.0/collect2 
+	-plugin /Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/8.3.0/liblto_plugin.so 
+	-plugin-opt=/Develop/vendor/toolchain/x86_64-mac-linux-gnu/libexec/gcc/x86_64-linux/8.3.0/lto-wrapper 
+	-plugin-opt=-fresolution=/var/folders/8j/fp05dzwj18nc2tzstqw4t4x00000gn/T//cciY7sLG.res 
+	-plugin-opt=-pass-through=-lgcc_s 
+	-plugin-opt=-pass-through=-lgcc 
+	-plugin-opt=-pass-through=-lc 
+	-plugin-opt=-pass-through=-lgcc_s 
+	-plugin-opt=-pass-through=-lgcc 
+	--sysroot=/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot 
+	--eh-frame-hdr -m elf_x86_64 
+	-dynamic-linker /lib64/ld-linux-x86-64.so.2 
+	-o build/app 
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/lib/crt1.o 
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/lib/crti.o 
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/8.3.0/crtbegin.o 
+	-L/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/8.3.0 
+	-L/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/lib64
+	-L/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/lib
+	-L/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/lib 
+	-L/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/usr/lib 
+	build/app.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc 
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/8.3.0/crtend.o 
+	/Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/lib/crtn.o
+
+/Develop/vendor/toolchain/x86_64-mac-linux-gnu/lib/gcc/x86_64-linux/8.3.0/../../../../x86_64-linux/bin/ld: warning: libc.so, needed by /Develop/vendor/toolchain/x86_64-mac-linux-gnu/x86_64-linux/sysroot/usr/lib/libm.so.6, not found (try using -rpath or -rpath-link)
+COLLECT_GCC_OPTIONS='-v' '-o' 'build/app' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+

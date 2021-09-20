@@ -1,0 +1,146 @@
+`configure' configures GNU C Library (see version.h) to adapt to many kinds of systems.
+
+Usage: ./configure [OPTION]... [VAR=VALUE]...
+
+To assign environment variables (e.g., CC, CFLAGS...), specify them as
+VAR=VALUE.  See below for descriptions of some of the useful variables.
+
+Defaults for the options are specified in brackets.
+
+Configuration:
+  -h, --help              display this help and exit
+      --help=short        display options specific to this package
+      --help=recursive    display the short help of all the included packages
+  -V, --version           display version information and exit
+  -q, --quiet, --silent   do not print `checking ...' messages
+      --cache-file=FILE   cache test results in FILE [disabled]
+  -C, --config-cache      alias for `--cache-file=config.cache'
+  -n, --no-create         do not create output files
+      --srcdir=DIR        find the sources in DIR [configure dir or `..']
+
+Installation directories:
+  --prefix=PREFIX         install architecture-independent files in PREFIX
+                          [/usr/local]
+  --exec-prefix=EPREFIX   install architecture-dependent files in EPREFIX
+                          [PREFIX]
+
+By default, `make install' will install all the files in
+`/usr/local/bin', `/usr/local/lib' etc.  You can specify
+an installation prefix other than `/usr/local' using `--prefix',
+for instance `--prefix=$HOME'.
+
+For better control, use the options below.
+
+Fine tuning of the installation directories:
+  --bindir=DIR            user executables [EPREFIX/bin]
+  --sbindir=DIR           system admin executables [EPREFIX/sbin]
+  --libexecdir=DIR        program executables [EPREFIX/libexec]
+  --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
+  --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
+  --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
+  --libdir=DIR            object code libraries [EPREFIX/lib]
+  --includedir=DIR        C header files [PREFIX/include]
+  --oldincludedir=DIR     C header files for non-gcc [/usr/include]
+  --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
+  --datadir=DIR           read-only architecture-independent data [DATAROOTDIR]
+  --infodir=DIR           info documentation [DATAROOTDIR/info]
+  --localedir=DIR         locale-dependent data [DATAROOTDIR/locale]
+  --mandir=DIR            man documentation [DATAROOTDIR/man]
+  --docdir=DIR            documentation root [DATAROOTDIR/doc/glibc]
+  --htmldir=DIR           html documentation [DOCDIR]
+  --dvidir=DIR            dvi documentation [DOCDIR]
+  --pdfdir=DIR            pdf documentation [DOCDIR]
+  --psdir=DIR             ps documentation [DOCDIR]
+
+System types:
+  --build=BUILD     configure for building on BUILD [guessed]
+  --host=HOST       cross-compile to build programs to run on HOST [BUILD]
+
+Optional Features:
+  --disable-option-checking  ignore unrecognized --enable/--with options
+  --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --disable-sanity-checks really do not use threads (should not be used except
+                          in special situations) [default=yes]
+  --enable-shared         build shared library [default=yes if GNU ld]
+  --enable-profile        build profiled library [default=no]
+  --enable-static-pie     enable static PIE support and use it in the
+                          testsuite [default=no]
+  --disable-timezone-tools
+                          do not install timezone tools [default=install]
+  --enable-hardcoded-path-in-tests
+                          hardcode newly built glibc path in tests
+                          [default=no]
+  --enable-stackguard-randomization
+                          initialize __stack_chk_guard canary with a random
+                          number at program start
+  --disable-hidden-plt    do not hide internal function calls to avoid PLT
+  --enable-bind-now       disable lazy relocations in DSOs
+  --enable-stack-protector=[yes|no|all|strong]
+                          Use -fstack-protector[-all|-strong] to detect glibc
+                          buffer overflows
+  --enable-static-nss     build static NSS modules [default=no]
+  --disable-force-install don't force installation of files from this package,
+                          even if they are older than the installed files
+  --enable-maintainer-mode
+                          enable make rules and dependencies not useful (and
+                          sometimes confusing) to the casual installer
+  --enable-kernel=VERSION compile for compatibility with kernel not older than
+                          VERSION
+  --enable-all-warnings   enable all useful warnings gcc can issue
+  --disable-werror        do not build with -Werror
+  --enable-multi-arch     enable single DSO with optimizations for multiple
+                          architectures
+  --disable-experimental-malloc
+                          disable experimental malloc features
+  --disable-crypt         do not build nor install the passphrase hashing
+                          library, libcrypt
+  --enable-nss-crypt      enable libcrypt to use nss
+  --enable-obsolete-rpc   build and install the obsolete RPC code for
+                          link-time usage
+  --enable-obsolete-nsl   build and install the obsolete libnsl library and
+                          depending NSS modules
+  --enable-systemtap      enable systemtap static probe points [default=no]
+  --disable-build-nscd    disable building and installing the nscd daemon
+  --disable-nscd          library functions will not contact the nscd daemon
+  --enable-pt_chown       Enable building and installing pt_chown
+  --enable-tunables       Enable tunables support. Known values are 'yes',
+                          'no' and 'valstring'
+  --enable-mathvec        Enable building and installing mathvec [default
+                          depends on architecture]
+  --enable-cet            enable Intel Control-flow Enforcement Technology
+                          (CET), x86 only
+
+Optional Packages:
+  --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+  --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+  --with-pkgversion=PKG   Use PKG in the version string in place of "GNU libc"
+  --with-bugurl=URL       Direct users to URL to report a bug
+  --with-gd=DIR           find libgd include dir and library with prefix DIR
+  --with-gd-include=DIR   find libgd include files in DIR
+  --with-gd-lib=DIR       find libgd library files in DIR
+  --with-binutils=PATH    specify location of binutils (as and ld)
+  --with-selinux          if building with SELinux support
+  --with-headers=PATH     location of system headers to use (for example
+                          /usr/src/linux/include) [default=compiler default]
+  --with-default-link     do not use explicit linker scripts
+  --with-cpu=CPU          select code for CPU variant
+
+Some influential environment variables:
+  CC          C compiler command
+  CFLAGS      C compiler flags
+  LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
+              nonstandard directory <lib dir>
+  LIBS        libraries to pass to the linker, e.g. -l<library>
+  CPPFLAGS    (Objective) C/C++ preprocessor flags, e.g. -I<include dir> if
+              you have headers in a nonstandard directory <include dir>
+  CPP         C preprocessor
+  CXX         C++ compiler command
+  CXXFLAGS    C++ compiler flags
+
+Use these variables to override the choices made by `configure' or to help
+it to find libraries and programs with nonstandard names/locations.
+
+Report bugs to <https://sourceware.org/bugzilla/>.
+GNU C Library home page: <http://www.gnu.org/software/glibc/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
