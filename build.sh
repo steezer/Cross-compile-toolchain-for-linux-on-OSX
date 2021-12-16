@@ -58,6 +58,9 @@ buildStep2(){
 	echo -e "\nStep 2 - Linux kernel headers...\n" && sleep 2
 	if [ $USE_NEWLIB -eq 0 ]; then
 	    cd ../src/$LINUX_KERNEL_VERSION
+	    if [[ ! -d "arch/aarch64" ]]; then
+	    	cp -r arch/arm64 arch/aarch64
+	    fi
 	    make V=1 ARCH=$LINUX_ARCH INSTALL_HDR_PATH=$CROSS_SYSROOT/usr headers_install
 	    cd ../../build
 	fi
@@ -145,13 +148,13 @@ buildStep7(){
 #####################Build step##################################
 
 # # Step 1. Binutils
-# buildStep1
+buildStep1
 
 # # Step 2. Linux Kernel Headers
-# buildStep2
+buildStep2
 
 # # Step 3. C/C++ Compilers
-# buildStep3
+buildStep3
 
 # Step 4. Standard C Library Headers and Startup Files
 buildStep4
