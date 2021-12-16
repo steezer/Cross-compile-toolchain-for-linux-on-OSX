@@ -42,6 +42,7 @@ buildStep1(){
 	echo "Step 1. Binutils">step.log
 	echo "  start: $(date "+%Y-%m-%d %H:%M:%S")">>step.log
 	echo -e "\nStep 1 - building binutils...\n" && sleep 2
+	[ -d build-binutils ] || rm -rf build-binutils
 	mkdir -p build-binutils
 	cd build-binutils
 	../../src/$BINUTILS_VERSION/configure --prefix=$INSTALL_PATH --target=$TARGET $BINUTIL_OPTIONS
@@ -143,14 +144,14 @@ buildStep7(){
 #################################################################
 #####################Build step##################################
 
-# Step 1. Binutils
-buildStep1
+# # Step 1. Binutils
+# buildStep1
 
-# Step 2. Linux Kernel Headers
-buildStep2
+# # Step 2. Linux Kernel Headers
+# buildStep2
 
-# Step 3. C/C++ Compilers
-buildStep3
+# # Step 3. C/C++ Compilers
+# buildStep3
 
 # Step 4. Standard C Library Headers and Startup Files
 buildStep4
